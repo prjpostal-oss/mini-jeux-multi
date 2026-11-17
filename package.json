@@ -1,0 +1,13 @@
+{
+  "name": "jeu-multi",
+  "version": "1.0.0",
+  "description": "Site de mini-jeux multijoueur (2 joueurs)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.0",
+    "socket.io": "^4.8.0"
+  }
+}
