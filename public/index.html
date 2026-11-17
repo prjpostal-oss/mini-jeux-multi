@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini-Jeux Multijoueur</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🎮 Mini-Jeux à 2</h1>
+      <p>Joue avec un ami sur un autre PC</p>
+    </header>
+
+    <section class="lobby" id="lobby">
+      <div class="actions">
+        <button id="btn-create" class="btn primary">Créer une salle</button>
+        <div class="join">
+          <input type="text" id="room-code" placeholder="Code de la salle" maxlength="6">
+          <button id="btn-join" class="btn">Rejoindre</button>
+        </div>
+      </div>
+
+      <div id="room-info" class="room-info hidden">
+        <p>Code de la salle : <strong id="display-code"></strong></p>
+        <p id="status">En attente du 2ème joueur...</p>
+      </div>
+    </section>
+
+    <section class="games hidden" id="games-section">
+      <h2>Choisis un jeu</h2>
+      <div class="games-grid">
+        <div class="game-card" data-game="tictactoe">
+          <h3>❌ Tic-Tac-Toe</h3>
+          <p>Le classique morpion</p>
+        </div>
+        <div class="game-card coming-soon">
+          <h3>🏓 Pong</h3>
+          <p>Bientôt disponible</p>
+        </div>
+        <div class="game-card coming-soon">
+          <h3>🧠 Memory</h3>
+          <p>Bientôt disponible</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/js/main.js"></script>
+</body>
+</html>
